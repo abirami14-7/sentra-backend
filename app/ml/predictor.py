@@ -6,10 +6,10 @@ import joblib
 import numpy as np
 import pandas as pd
 
-ML_DIR = Path(os.getenv("SENTRA_ML_DIR", r"C:\dev\sentra_ml"))
+_DEFAULT_ML_DIR = Path(__file__).resolve().parent.parent.parent
+ML_DIR = Path(os.getenv("SENTRA_ML_DIR", str(_DEFAULT_ML_DIR)))
 MODEL_PATH = ML_DIR / "saved_models" / "best_model.joblib"
 METADATA_PATH = ML_DIR / "saved_models" / "metadata.json"
-
 CLASS_ANCHORS = {"LOW": 10, "MEDIUM": 45, "HIGH": 72, "CRITICAL": 92}
 
 FEATURE_DISPLAY = {
