@@ -1,0 +1,52 @@
+{
+  "best_model": "logistic_regression",
+  "trained_at": "2026-10-01T16:54:21.581439Z",
+  "num_samples": 6000,
+  "classes": [
+    "LOW",
+    "MEDIUM",
+    "HIGH",
+    "CRITICAL"
+  ],
+  "numeric_features": [
+    "hour",
+    "day_of_week",
+    "is_weekend",
+    "is_night",
+    "incident_density_7d",
+    "incident_severity_avg",
+    "lighting_score",
+    "transit_access",
+    "crowd_density",
+    "route_length_km",
+    "user_baseline_deviation",
+    "is_solo",
+    "has_live_share"
+  ],
+  "categorical_features": [
+    "area_type",
+    "journey_type"
+  ],
+  "results": [
+    {
+      "name": "logistic_regression",
+      "accuracy": 0.7542,
+      "weighted_f1": 0.7559
+    },
+    {
+      "name": "gradient_boosting",
+      "accuracy": 0.7225,
+      "weighted_f1": 0.7213
+    },
+    {
+      "name": "random_forest",
+      "accuracy": 0.7033,
+      "weighted_f1": 0.7024
+    },
+    {
+      "name": "decision_tree",
+      "accuracy": 0.6217,
+      "weighted_f1": 0.6298
+    }
+  ]
+}
